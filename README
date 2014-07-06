@@ -1,6 +1,6 @@
 This code is part of an assignment for the Spring 2013 Cloud Computing class of the Department of CS of the Illinois Institute of Technology.
 
-It is the skeleton for a dynamic provisioning scheduler in Amazon SQS. Contains:
+It is the skeleton for a dynamic provisioning scheduler in Amazon Web Services. Contains:
 
 - A client that sends tasks using Sockets to the Scheduler
 - A scheduler with 2 modes (Local and Remote) that runs those tasks using respectively a fixed pool of Threads of sending them to an Amazon SQS queue for them to be executed by a remote machine. That scheduler also processes the results of the tasks after they are complete and sends those results to the client
@@ -9,4 +9,4 @@ It is the skeleton for a dynamic provisioning scheduler in Amazon SQS. Contains:
 The scheduling is fairly simple but allows for more complex algorithms to be implemented. The scheduler checks the number of tasks on the queue and if that number is growing it instantiates more machines. On the other side, the remote workers shut down automatically if there isn´t more work on the queue.
 Also, because this is just a theorical implementation the tasks are always going to be sleep tasks for a specific number of seconds specified on the list of tasks to be performed.
 
-The is further analysis of the performance of the code available upon request.     
+There is further analysis of the performance of the code available upon request.     
